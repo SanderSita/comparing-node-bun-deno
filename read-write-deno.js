@@ -6,7 +6,17 @@ import { join } from "https://deno.land/std/path/mod.ts";
 
 const path = import.meta.dirname;
 
-const inputPath = join(path, "./text-files/500mb.txt");
+// grab mb-size param from command line args if provided
+const args = Object.fromEntries(
+	process.argv.slice(2).map((arg) => {
+		const [key, value] = arg.replace(/^--/, "").split("=");
+		return [key, value ?? true];
+	})
+);
+
+const mbSize = parseInt(args["txt-size"] || 50);
+
+const inputPath = join(path, `./text-files/${mbSize}mb.txt`);
 const outputPath = join(path, "./text-files/large-output.txt");
 
 async function benchmarkReadWrite(runs) {

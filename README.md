@@ -35,8 +35,8 @@ node prime-numbers.js
 bun run prime-numbers.js
 deno run prime-numbers.js
 
-# run read/write experiment
-node read-write.js
-bun run read-write.js
-deno run --allow-read --allow-write read-write-deno.js
+# run read/write experiment (set txt-size to 50, 200 or 500)
+node read-write.js --txt-size=50
+bun run read-write.js --txt-size=50
+deno run --allow-read --allow-write read-write-deno.js --txt-size=50
 ```
