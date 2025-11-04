@@ -15,4 +15,5 @@ The tests include both CPU-bound and I/O-bound tasks:
 -   The test text files (for I/O experiments)
 
 📂 **Download required text files:**  
+put these txt files in the /text-files folder
 [Download text files here](https://icthva-my.sharepoint.com/:f:/g/personal/sander_sekreve_hva_nl/El2_6MnCnKpClRYoOm1ov-QBu7D_Z4TiAdajXriecZaGZA?e=2Ork0p)
